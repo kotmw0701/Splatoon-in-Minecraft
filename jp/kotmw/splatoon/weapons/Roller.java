@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @author kotmw0701
  * @license LGPLv3
  * @copyright Copyright kotmw 2015
