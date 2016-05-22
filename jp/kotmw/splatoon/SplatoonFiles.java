@@ -24,7 +24,7 @@ import org.bukkit.plugin.Plugin;
 
 public class SplatoonFiles
 {
-	public static File config = new File(Splatoon.instance.filepath + "Config.yml");
+	public static File config = new File(Splatoon.instance.filepath + "config.yml");
 	public static File arenafile = new File(Splatoon.instance.filepath + "Arena.yml");
 	public static File ratefile = new File(Splatoon.instance.filepath + "Rate.yml");
 	public static File lobbyfile = new File(Splatoon.instance.filepath + "Lobby.yml");
