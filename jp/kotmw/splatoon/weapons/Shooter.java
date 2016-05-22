@@ -111,11 +111,11 @@ public class Shooter implements Listener
 						}
 					}
 				}
-				for(int x=startLoc.getBlockX(); x<startLoc.getBlockX()+r + 1; x++)
+				for(int x=startLoc.getBlockX(); x<startLoc.getBlockX()+r + 2; x++)
 				{
-					for(int y=startLoc.getBlockY(); y<startLoc.getBlockY()+r + 1; y++)
+					for(int y=startLoc.getBlockY(); y<startLoc.getBlockY()+r + 2; y++)
 					{
-						for(int z=startLoc.getBlockZ(); z<startLoc.getBlockZ()+r + 1; z++)
+						for(int z=startLoc.getBlockZ(); z<startLoc.getBlockZ()+r + 2; z++)
 						{
 							Splatoon.battle.Damager(player, x, y, z, 5);
 						}

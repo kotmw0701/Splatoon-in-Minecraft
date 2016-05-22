@@ -187,7 +187,7 @@ public class Roller implements Listener
 				{
 					Block CheckBlock = world.getBlockAt(xPoint, yPoint, Center_z);
 					ColorSelect.ColorChange(CheckBlock, player);
-					Splatoon.battle.Damager(player, xPoint, yPoint, Center_z, 20);
+					Splatoon.battle.Damager(player, xPoint, yPoint, Center_z, 10);
 				}
 			}
 			return;
@@ -202,7 +202,7 @@ public class Roller implements Listener
 				{
 					Block CheckBlock = world.getBlockAt(Center_x, yPoint, zPoint);
 					ColorSelect.ColorChange(CheckBlock, player);
-					Splatoon.battle.Damager(player, Center_x, yPoint, zPoint, 20);
+					Splatoon.battle.Damager(player, Center_x, yPoint, zPoint, 10);
 				}
 			}
 			return;

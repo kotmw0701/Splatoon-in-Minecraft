@@ -52,7 +52,7 @@ public class Charger implements Listener
 					|| (!SplatCharger.getItemMeta().getDisplayName().equals(data.CHARGER))
 					|| (!SplatCharger.getItemMeta().hasLore()))
 				return;
-			if(ink <= 0.45f)
+			if(ink <= 0.35f)
 			{
 				SplatTitle.sendFullTitle(player, 1, 20, 1, "", ChatColor.RED + "インクがありません！");
 				e.setCancelled(true);
@@ -84,7 +84,7 @@ public class Charger implements Listener
 			Snowball ball = (Snowball)player.launchProjectile(Snowball.class);
 			Vector vec = player.getLocation().getDirection();
 			ball.setVelocity(new Vector(vec.getX()*10,vec.getY()*10,vec.getZ()*10));
-			player.setExp(ink - 0.45f);
+			player.setExp(ink - 0.35f);
 			BlockIterator seeblock = new BlockIterator(player, shootlength);
 			while(seeblock.hasNext())
 			{
@@ -129,7 +129,7 @@ public class Charger implements Listener
 	{
 		for(int x = loc.getBlockX(); x < loc.getBlockX() + r * 2; x++)
 		{
-			for(int y = loc.getBlockY(); y < loc.getBlockY() + r * 2; y++)
+			for(int y = loc.getBlockY() +1; y > loc.getBlockY() -(r * 8); y--)
 			{
 				for(int z = loc.getBlockZ(); z < loc.getBlockZ() + r * 2; z++)
 				{
@@ -145,7 +145,7 @@ public class Charger implements Listener
 			{
 				for(int z = loc.getBlockZ(); z < loc.getBlockZ() + r + 1; z++)
 				{
-					Splatoon.battle.Damager(player, x, y, z, 7);
+					Splatoon.battle.Damager(player, x, y, z, 9);
 				}
 			}
 		}
