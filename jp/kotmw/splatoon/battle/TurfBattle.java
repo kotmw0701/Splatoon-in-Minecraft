@@ -699,6 +699,8 @@ public class TurfBattle
 			int o_Z = otherloc.getBlockZ();
 			if((x == o_X)&&(y == o_Y)&&(z == o_Z))
 			{
+				if(target.hasMetadata(Splatoon.data.InvincibleMeta))
+					break;
 				players.damage(damage);
 				target = players;
 			}
