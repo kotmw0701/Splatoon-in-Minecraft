@@ -108,6 +108,7 @@ public class Shooter implements Listener
 							Location loc = new Location(startLoc.getWorld(), x, y, z);
 							Block b = loc.getBlock();
 							ColorSelect.ColorChange(b, player);
+							Splatoon.battle.Damager(player, x, y, z, 5);
 						}
 					}
 				}
