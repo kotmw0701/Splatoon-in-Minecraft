@@ -10,3 +10,8 @@ Splatoon in Minecraft for BukkitPlugin made kotmw0701
 
 1.8.4～1.8.9
 (今のところ1.9に対応させる予定はなし)
+
+##細かい修正とか
+
+16/5/23
+・無敵時間の修正
