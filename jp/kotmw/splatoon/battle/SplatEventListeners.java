@@ -118,11 +118,6 @@ public class SplatEventListeners implements Listener
 		if(e.getEntity() instanceof Player)
 		{
 			Player player = (Player) e.getEntity();
-			if(player.hasMetadata(Splatoon.data.InvincibleMeta))
-			{
-				e.setCancelled(true);
-				return;
-			}
 			if((player.hasMetadata(Splatoon.data.RoomMeta))
 					|| (player.hasMetadata(Splatoon.data.ArenaMeta)))
 			{
