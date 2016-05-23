@@ -42,7 +42,7 @@ public class Respawn extends BukkitRunnable{
 			TurfBattle.SetWeapons(player);
 			SplatEventListeners.death.remove(player.getName());
 			player.getInventory().setHeldItemSlot(0);
-			player.setGameMode(GameMode.ADVENTURE);
+
 			player.setVelocity(new Vector());
 			player.setExp(1.0f);
 		}
@@ -53,6 +53,9 @@ public class Respawn extends BukkitRunnable{
 		}
 		else if(tick < 0)
 		{
+			Location loc = Splatoon.teaming.getSplatRespawnLocation(player,player.getMetadata(Splatoon.data.ArenaMeta).get(0).asString());
+			player.teleport(loc, TeleportCause.PLUGIN);
+			player.setGameMode(GameMode.ADVENTURE);
 			player.removeMetadata(Splatoon.data.InvincibleMeta, Splatoon.instance);
 			this.cancel();
 		}

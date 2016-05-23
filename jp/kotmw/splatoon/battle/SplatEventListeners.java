@@ -8,12 +8,7 @@ package jp.kotmw.splatoon.battle;
 import java.util.HashMap;
 import java.util.Map;
 
-import jp.kotmw.splatoon.ColorSelect;
-import jp.kotmw.splatoon.JoinQuitEvents;
-import jp.kotmw.splatoon.SelectInv;
-import jp.kotmw.splatoon.SplatTitle;
-import jp.kotmw.splatoon.Splatoon;
-import jp.kotmw.splatoon.Squid;
+import jp.kotmw.splatoon.*;
 import jp.kotmw.splatoon.arena.ArenaData;
 import jp.kotmw.splatoon.arena.ArenaLogs;
 import jp.kotmw.splatoon.arena.ArenaSettings;
@@ -189,7 +184,14 @@ public class SplatEventListeners implements Listener
 		Player player = e.getEntity();
 		if(!player.hasMetadata(Splatoon.data.ArenaMeta))
 			return;
-		player.sendMessage("death");
+
+		String arena = player.getMetadata(Splatoon.data.ArenaMeta).get(0).asString();
+		String team = player.hasMetadata(Splatoon.data.Team1Meta) ? "[TEAM1] " : "[TEAM2] ";
+		ChatColor color = player.hasMetadata(Splatoon.data.Team1Meta)
+				? ColorSelect.color_team1_prefix(arena)
+				: ColorSelect.color_team2_prefix(arena);
+
+		Metrics.AllPlayerSend(color + player.getDisplayName() + ChatColor.YELLOW + "が倒された！");
 		e.setDeathMessage("");
 		e.getDrops().clear();
 		if(player.getKiller() instanceof Player)
