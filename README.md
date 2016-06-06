@@ -4,7 +4,7 @@ Splatoon in Minecraft for BukkitPlugin made kotmw0701
 
 ##概要
 
-任天堂が開発してるUiiWでのゲーム、「スプラトゥーン」をSpigot(及びCraftBukkit)サーバーでそれっぽいものをプレイできるようにするプラグイン
+任天堂が開発してるWiiUでのゲーム、「スプラトゥーン」をSpigot(及びCraftBukkit)サーバーでそれっぽいものをプレイできるようにするプラグイン
 
 ##対応バージョン
 
